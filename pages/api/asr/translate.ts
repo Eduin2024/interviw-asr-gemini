@@ -80,6 +80,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     return res.status(200).json({
       status: "success",
+      timestamp: new Date().toISOString(),
       generatedContent: result.response.text(),
     });
   } catch (error) {
