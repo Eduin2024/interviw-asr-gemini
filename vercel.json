@@ -1,11 +1,18 @@
 {
+  "version": 2,
   "builds": [
     {
-      "src": "package.json",
+      "src": "src/**/*.ts",
       "use": "@vercel/node"
     }
   ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/src/$1"
+    }
+  ],
   "env": {
-    "FFMPEG_PATH": "node_modules/ffmpeg-static/ffmpeg"
+    "NODE_ENV": "production"
   }
 } 
