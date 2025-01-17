@@ -2,18 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "src/index.ts",
-      "use": "@vercel/node"
+      "src": "package.json",
+      "use": "@vercel/next"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/src/index.ts"
+      "dest": "/"
     }
-  ],
-  "env": {
-    "NODE_ENV": "production",
-    "FFMPEG_PATH": "node_modules/ffmpeg-static/ffmpeg"
-  }
+  ]
 } 
