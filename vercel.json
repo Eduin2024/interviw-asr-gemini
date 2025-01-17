@@ -8,8 +8,16 @@
   ],
   "routes": [
     {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    },
+    {
       "src": "/(.*)",
       "dest": "/"
     }
-  ]
+  ],
+  "env": {
+    "NODE_ENV": "production",
+    "FFMPEG_PATH": "/var/task/node_modules/ffmpeg-static/ffmpeg"
+  }
 } 
