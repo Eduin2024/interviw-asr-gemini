@@ -1,0 +1,11 @@
+{
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/node"
+    }
+  ],
+  "env": {
+    "FFMPEG_PATH": "node_modules/ffmpeg-static/ffmpeg"
+  }
+} 

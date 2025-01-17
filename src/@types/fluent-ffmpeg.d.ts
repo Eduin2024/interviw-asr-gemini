@@ -23,6 +23,10 @@ declare module 'fluent-ffmpeg' {
       save(output: string): this;
     }
   
+    interface FfmpegCommandConfig {
+      ffmpegPath?: string;
+    }
+  
     export = ffmpeg;
   }
   
